@@ -1,0 +1,164 @@
+// font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap');
+
+// color
+$primary : #B6FBEB;
+$sec : #45391D;
+$third : #eb9812;
+$text : #070707;
+
+// mixin
+@mixin tombol {
+    display: inline-block;
+    color: white;
+    background-color: $third;
+    border-radius: 2em;
+    padding: 0.5em 2em;
+    text-decoration: none;
+}
+
+// style
+body {
+    font-family: 'Montserrat', sans-serif;
+    // content: '';
+    // background-image: url(../img/landing-politic.png);
+    // background-position: top right;
+    // background-repeat: no-repeat;
+    // background-size: 55vmax;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // bottom: 0;
+    // right: 0;
+}
+
+// navbar
+.custom-nav {
+    .navbar-brand{
+        color: $text;
+        font-weight: 700;
+        font-size: 1.4rem;
+
+    }
+    #navbarNav{
+        .navbar-nav{
+            .nav-item{
+                .nav-link{
+                    color: $text;
+                    font-weight: 500;
+                    margin-left: 0.8em;
+
+                    &:hover{
+                        color: lighten($text, 30%);
+                        transition: .3s color ease;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 992px) {
+        margin-top: -1em;
+    }
+}
+
+// section
+.custom-sec{
+    margin-top: 5em;
+    h3{
+        font-size: 4rem;
+        color: $text;
+        font-weight: 500;
+    }
+    p{
+        font-size: 1.2rem;
+        color: $text;
+        font-weight: 400;
+    }
+    a{
+        margin-top: 1em;
+        @include tombol();
+        transition: 0.5s ease;
+
+        &:hover{
+            color: $third;
+            border: 1px solid $third;
+            background-color: transparent;
+        }
+    }
+    img{
+        width: 800px;
+        height: 600px;
+        margin-top: -12em;
+        margin-left: 3.4em;
+    }
+}
+
+// about
+.blog{
+    margin-top: 3em;
+}
+
+// categories
+.categories{
+    margin-top: 3em;
+}
+
+// footer
+.footer{
+    background-color: $sec;
+    button{
+        margin-bottom: 1em;
+        margin-left: 1em;
+        transition: o.5s ease;
+        @include tombol();
+
+        &:hover{
+            color: $third;
+            border: 1px solid $third;
+            background-color: transparent;
+        }
+    }
+
+    p{
+        color: $primary;
+        font-weight: 400;
+    }
+
+    .cont{
+        margin-left: 3em;
+        a{
+            text-decoration: none;
+            color: $primary;
+            font-weight: 300;
+        }
+    }
+
+    .alamat{
+        .ala{
+            font-weight: 400;
+        }
+        .alam{
+            font-weight: 300;
+        }
+    }
+
+    .card{
+        font-weight: 500;
+        background-color: $sec;
+        .haha{
+            background-color: $text;
+        }
+        color: $primary;
+        form{
+            ul{
+                li{
+                    background-color: $sec;
+                }
+            }
+            label{
+                font-weight: 400;
+                color: $primary;
+            }
+        }
+    }
+}
